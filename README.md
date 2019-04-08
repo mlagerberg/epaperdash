@@ -9,7 +9,7 @@ Designed to work with the [E-paper HAT by Percheron Electronics][percheron] but 
 
 ## Getting started
 
-Assuming you already have the e-paper HAT succesfully installed. If not, read the detailed instructions [further below][/#e-paper-installation].
+Assuming you already have the e-paper HAT succesfully installed. If not, read the detailed instructions [further below][#e-paper-installation].
 
 #### Installation
 
