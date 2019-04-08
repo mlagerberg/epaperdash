@@ -1,0 +1,12 @@
+build/
+*.pyc
+eph_setup.zip
+gratis
+epaper.sublime-project
+epaper.sublime-workspace
+*.egg-info
+*.log
+src/dist/
+config.py
+cache/
+*.psd
