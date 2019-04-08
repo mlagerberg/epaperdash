@@ -9,7 +9,7 @@ Designed to work with the [E-paper HAT by Percheron Electronics][percheron] but 
 
 ## Getting started
 
-Assuming you already have the e-paper HAT succesfully installed. If not, read the detailed instructions [further below][/#epaper].
+Assuming you already have the e-paper HAT succesfully installed. If not, read the detailed instructions [further below][/#e-paper-installation].
 
 #### Installation
 
@@ -44,7 +44,7 @@ To run the program on boot, in the background, install and run the service like 
 	- Press button 1 to initiate a reboot, button 2 to shut the Pi down. Confirm with the leftmost buttons, cancel with the rightmost ones.
 
 
-## <a name"epaper"></a>E-paper installation
+## E-paper installation
 
 To perform the installation of the EPD, run the `epd_setup` script in the root folder. This file is provided by Percheron Electronics and comes with these instructions:
 
