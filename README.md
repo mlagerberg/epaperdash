@@ -40,6 +40,7 @@ To run the program on boot, in the background, install and run the service like 
 
 - Displays the time and date.
 - Shows the current temperature and weather condition, plus the forecast of the next five 3-hours intervals.
+- Fahrenheit and Celsius mode.
 - Adds shutdown and reboot functionality to the buttons.
 	- Press button 1 to initiate a reboot, button 2 to shut the Pi down. Confirm with the leftmost buttons, cancel with the rightmost ones.
 
