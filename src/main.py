@@ -19,6 +19,7 @@
 from datetime import datetime
 import logging
 import time
+import os
 import sys
 import traceback
 from EPD import EPD
@@ -42,8 +43,9 @@ def on_click(button):
     print('Button pressed: %s'%button_pressed)
 
 def init_logger():
-    logger = logging.getLogger('../logs/epd-service')
-    hdlr = logging.FileHandler('../logs/epd-service.log')
+    dirname = os.path.dirname(os.path.realpath(__file__))
+    logger = logging.getLogger(os.path.join(dirname, '../logs/epd-service'))
+    hdlr = logging.FileHandler(os.path.join(dirname, '../logs/epd-service.log'))
     formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
     hdlr.setFormatter(formatter)
     logger.addHandler(hdlr)

@@ -12,6 +12,7 @@
 # express or implied.  See the License for the specific language
 # governing permissions and limitations under the License.
 
+import os
 
 # Pixel colors
 BLACK = 0
@@ -28,8 +29,9 @@ BUTTONS = [BUTTON_1, BUTTON_2, BUTTON_3, BUTTON_4]
 
 LEDS = [6, 12, 5]
 
-FONT_FILE = 'assets/fonts/Coda-Regular.ttf'
-FONT_FILE_BOLD = 'assets/fonts/Coda-ExtraBold.ttf'
+dirname = os.path.dirname(__file__)
+FONT_FILE = os.path.join(dirname, 'assets/fonts/Coda-Regular.ttf')
+FONT_FILE_BOLD = os.path.join(dirname, 'assets/fonts/Coda-ExtraBold.ttf')
 
 STATE_IDLE = 1
 STATE_SHUTDOWN_CONFIRM = 2
