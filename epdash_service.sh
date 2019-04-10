@@ -1,4 +1,16 @@
 #!/bin/sh
+### BEGIN INIT INFO
+# Provides:		epdash
+# Required-Start:	$local_fs $remote_fs $syslog
+# Required-Stop:	$local_fs $remote_fs $syslog
+# Should-Start:		$network
+# Should-Stop:		$network
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description: 	Runs E-paper Dashboard
+# Description:			Runs E-paper Dashboard
+### END INIT INFO
+
 #
 # Copyright 2019 Mathijs Lagerberg.
 #
@@ -15,21 +27,10 @@
 # governing permissions and limitations under the License.
 #
 #
-### BEGIN INIT INFO
-# Provides:		epdash
-# Required-Start:	$local_fs $remote_fs $syslog
-# Required-Stop:	$local_fs $remote_fs $syslog
-# Should-Start:		$network
-# Should-Stop:		$network
-# Default-Start:	2 3 4 5
-# Default-Stop:		0 1 6
-# Short-Description: 	Runs E-paper Dashboard
-# Description:			Runs E-paper Dashboard
-### END INIT INFO
 
 start() {
 	echo "Starting E-paper service..."
-	sudo python /home/pi/epaperdash/src/main.py &
+	sudo python /home/pi/epaperdash/src/main.py -d &
 }
 
 stop() {
