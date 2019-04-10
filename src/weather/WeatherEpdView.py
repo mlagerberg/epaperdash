@@ -19,7 +19,7 @@ from View import View
 from WeatherView import WeatherView
 from PIL import ImageFont
 from PIL import Image
-import os.path
+import os
 
 TEXT_SIZE_TIME = 16
 TEXT_SIZE_TEMP = 24
@@ -33,7 +33,9 @@ COLUMN_WIDTH = 32
 COLUMN_MARGIN = 12
 COLUMNS = 5
 ICON_SIZE = 30, 30
-ICON_PATH = 'assets/icons/{0}.png'
+
+dirname = os.path.dirname(__file__)
+ICON_PATH = os.path.join(dirname, '../assets/icons/{0}.png')
 
 class WeatherEpdView(WeatherView):
     """

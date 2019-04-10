@@ -18,9 +18,10 @@ from PIL import ImageFont
 from PIL import Image
 import urllib
 import io
-import os.path
+import os
 
-CACHE_DIR = '../cache/{0}'
+dirname = os.path.dirname(__file__)
+CACHE_DIR = os.path.join(dirname, '../cache/{0}')
 THRESHOLD = 245
 
 def process_pixel_red(value):
