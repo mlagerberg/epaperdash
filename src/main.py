@@ -145,13 +145,25 @@ if "__main__" == __name__:
 
     logger = init_logger()
     exit_status = None
-    if len(sys.argv) == 2 and sys.argv[1] == 'test':
+    if len(sys.argv) == 2 and (sys.argv[1] == '-t' or sys.argv[1] == '--test'):
         print("Fetching weather...")
         WeatherController().fetch_weather()
         print("Done")
+    elif len(sys.argv) == 2 and (sys.argv[1] == '-d' or sys.argv[1] == '--daemon'):
+        print("Running as daemon")
+        pid = os.fork()
+        if pid == 0:
+            try:
+                main(sys.argv[1:])
+            except Exception as e:
+                logger.exception(e)
+                exit_status = 'exception'
+            finally:
+                GPIO.cleanup()
+        else:
+            exit_status = 'Exiting while fork continues with PID {0}'.format(pid)
     else:
         try:
-            # do the thing
             main(sys.argv[1:])
         except KeyboardInterrupt:
             logger.info('keyboard interrupt')
