@@ -7,6 +7,8 @@ Designed to work with the [E-paper HAT by Percheron Electronics][percheron] but 
 
 ![The E-paper Display](preview.jpg)
 
+Here's the display in action, showing the weather for the upcoming hours. The double line in the graph indicates the variation in high and low temperatures for each time slot.
+
 ## Getting started
 
 Assuming you already have the e-paper HAT succesfully installed. If not, read the detailed instructions [further below][#e-paper-installation].
@@ -40,6 +42,7 @@ To run the program on boot, in the background, install and run the service like 
 
 - Displays the time and date.
 - Shows the current temperature and weather condition, plus the forecast of the next five 3-hours intervals.
+- Celsius and Fahrenheit mode.
 - Adds shutdown and reboot functionality to the buttons.
 	- Press button 1 to initiate a reboot, button 2 to shut the Pi down. Confirm with the leftmost buttons, cancel with the rightmost ones.
 
