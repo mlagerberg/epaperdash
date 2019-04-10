@@ -26,16 +26,16 @@ Run `./main.py` to run the program. The program will run until you press `Ctrl+C
 
 To run the program on boot, in the background, install and run the service like so:
 
-1. Edit `epdash_service.sh` and make sure line 32, which should look like this: `sudo python /home/pi/epaperdash/src/main.py`, to point to the location your `main.py` is at.
+1. Edit `epdash.sh` and make sure line 32, which should look like this: `sudo python /home/pi/epaperdash/src/main.py`, to point to the location your `main.py` is at.
 2. Install the script as a service, it will run on boot after this:
 
 	```bash
-	sudo cp epdash_service.sh /etc/init.d/epdash_service
-	sudo chmod +x /etc/init.d/epdash_service
-	sudo update-rc.d epdash_service defaults
+	sudo cp epdash.sh /etc/init.d/epdash
+	sudo chmod +x /etc/init.d/epdash
+	sudo systemctl enable epdash
 	```
 
-3. Start the service immediately: `sudo service epdash_service start`
+3. Start the service immediately: `sudo systemctl start epdash`
 
 
 ## Features
