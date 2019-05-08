@@ -1,7 +1,7 @@
 #!/bin/sh
 ### BEGIN INIT INFO
 # Provides:		epdash
-# Required-Start:	$local_fs $remote_fs $syslog
+# Required-Start:	$local_fs $remote_fs $syslog epd-fuse
 # Required-Stop:	$local_fs $remote_fs $syslog
 # Should-Start:		$network
 # Should-Stop:		$network
