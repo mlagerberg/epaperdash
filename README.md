@@ -9,9 +9,11 @@ Designed to work with the [E-paper HAT by Percheron Electronics][percheron] but 
 
 Here's the display in action, showing the weather for the upcoming hours. The double line in the graph indicates the variation in high and low temperatures for each time slot.
 
+
 ## Getting started
 
 Assuming you already have the e-paper HAT succesfully installed. If not, read the detailed instructions [further below][#e-paper-installation].
+
 
 #### Installation
 
@@ -19,6 +21,7 @@ Assuming you already have the e-paper HAT succesfully installed. If not, read th
 2. `pip install requests datetime tzlocal urllib`.
 3. Get your OpenWeatherMap api key [here][openweather] (it's free).
 4. Copy `config.example.py` to `config.py` and edit the file to add your OpenWeatherMap app id, and the latitude and longitude of your location. *Do not skip this step*, the project will not work without customizing the config file.
+
 
 #### Starting the weather display
 
@@ -49,29 +52,9 @@ To run the program on boot, in the background, install and run the service like 
 
 ## E-paper installation
 
-To perform the installation of the EPD, run the `epd_setup` script in the root folder. This file is provided by Percheron Electronics and comes with these instructions:
-
-```
-Unzip this folder into your /home/pi directory.
-Type chmod +x eph_setup to make the script executable.
-Type ./eph_setup
-The script will update your Pi to the latest software, install
-the software needed for your E-paper HAT, then reboot to activate.
-Log back in and type sudo echo C >> /dev/epd/command and your screen should blank.
-If not, check the fuse driver is running - type sudo service epd-fuse status.
-You should get back '[ ok ] EPD FUSE is running.'
-Then type cd gratis/PlatformWithOS/driver-common to move to the directory where the test programs live.
-Now, if you type sudo ./epd_test_screen 2.7, you should see the screen clear and then display
-Percheron Electronics. If you see no change in the display image but get the following message:
-
-clear display
-EPD panel broken
-images start
-image = 0
-EPD panel broken
-
-I'm afraid your screen has a crack in it and will not work. 
-```
+To perform the installation of the EPD, run the `epd_setup.sh` script in the root folder. 
+This file clones [this repo][gratis] and builds and installs the binaries requires for controlling the
+e-paper display. 
 
 
 ## License
@@ -94,5 +77,6 @@ limitations under the License.
 
 
 [percheron]: http://www.percheron-electronics.uk/shop/e-paper-hat/
+[gratis]: https://github.com/mlagerberg/gratis
 [openweather]: https://openweathermap.org/appid
 [epdpy]: src/EPD.py
