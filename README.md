@@ -20,7 +20,7 @@ Assuming you already have the e-paper HAT succesfully installed. If not, read th
 1. Clone the repo
 2. `pip install requests datetime tzlocal urllib`.
 3. Get your OpenWeatherMap api key [here][openweather] (it's free).
-4. Copy `config.example.py` to `config.py` and edit the file to add your OpenWeatherMap app id, and the latitude and longitude of your location. *Do not skip this step*, the project will not work without customizing the config file.
+4. Copy `src/config.example.py` to `src/config.py` and edit the file to add your OpenWeatherMap app id, and the latitude and longitude of your location. *Do not skip this step*, the project will not work without customizing the config file.
 
 
 #### Starting the weather display
