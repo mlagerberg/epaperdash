@@ -60,7 +60,7 @@ class WeatherEpdView(WeatherView):
         draw.rectangle((LEFT-2, TOP_GRAPH-2, width+4, TOP_GRAPH+height+4), fill=constants.WHITE, outline=constants.WHITE)
         # Show error if needed
         if self.weather is None:
-            self.center_horizontally(TOP_TEMPERATURE, "unable to get forecast", fill=constants.BLACK, font=self.temp_font)
+            self.center_horizontally(draw, TOP_TEMPERATURE, "unable to get forecast", fill=constants.BLACK, font=self.temp_font)
             return
         # Find highest and lowest of all forecasts
         low = 100
@@ -98,7 +98,7 @@ class WeatherEpdView(WeatherView):
             # Draw icon
             bitmap = self.get_icon(day)
             draw.bitmap((left, TOP_TIME + TEXT_SIZE_TIME), bitmap, fill=None)
-    
+
     def draw_line(self, draw, temp1, temp2, left, high, low, line_width=1):
             """ Draws a part of the graph from one temperature
                 to the next.

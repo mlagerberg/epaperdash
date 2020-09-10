@@ -47,9 +47,9 @@ class View(object):
     def __init__(self, epd = None):
         """ Epd context can be omitted but is required
             when working with e-paper displays.
-        """ 
+        """
         self.epd = epd
-        
+
     def must_update_fully(self):
         return self.update_fully
 
