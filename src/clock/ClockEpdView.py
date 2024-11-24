@@ -15,7 +15,7 @@
 # governing permissions and limitations under the License.
 
 import constants
-from ClockView import ClockView
+from clock.ClockView import ClockView
 
 from datetime import datetime
 from PIL import ImageFont

@@ -16,7 +16,7 @@
 
 import constants
 from View import View
-from WeatherView import WeatherView
+from weather.WeatherView import WeatherView
 from PIL import ImageFont
 from PIL import Image
 import os

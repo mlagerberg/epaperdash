@@ -15,7 +15,7 @@
 
 
 import constants
-from StatusView import StatusView
+from status.StatusView import StatusView
 
 from PIL import ImageFont
 

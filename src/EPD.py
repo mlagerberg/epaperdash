@@ -143,14 +143,14 @@ to use:
 
 
     def update(self):
-        self._command('U')
+        self._command(b'U')
 
     def partial_update(self):
-        self._command('P')
+        self._command(b'P')
 
     def clear(self):
-        self._command('C')
+        self._command(b'C')
 
     def _command(self, c):
-        with open(os.path.join(self._epd_path, 'command'), 'wb') as f:
+        with open(os.path.join(self._epd_path, 'command'), 'br+') as f:
             f.write(c)

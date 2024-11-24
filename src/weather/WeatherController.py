@@ -19,7 +19,7 @@ import os
 from datetime import datetime, timedelta
 
 from Controller import Controller
-from WeatherModel import WeatherModel
+from weather.WeatherModel import WeatherModel
 from config import app_id, lat, lon
 
 ROOT_URL = 'http://api.openweathermap.org/data/2.5/forecast'
@@ -51,7 +51,7 @@ class WeatherController(Controller):
         self.logger = logger
 
     def fetch_weather(self):
-    	global app_id, lat, lon
+        global app_id, lat, lon
         try:
             # Get API response
             uri = CONDITIONS_URL.format(app_id, lat, lon)
@@ -70,7 +70,7 @@ class WeatherController(Controller):
         except Exception as e:
             self.logger.exception(e)
             return None
-       
+
     def update(self):
         has_changed = False
         now = datetime.now()

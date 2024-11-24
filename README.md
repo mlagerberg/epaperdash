@@ -18,10 +18,13 @@ Assuming you already have the e-paper HAT succesfully installed. If not, read th
 #### Installation
 
 1. Clone the repo
-2. `pip install requests datetime tzlocal urllib`.
-3. Get your OpenWeatherMap api key [here][openweather] (it's free).
-4. Copy `src/config.example.py` to `src/config.py` and edit the file to add your OpenWeatherMap app id, and the latitude and longitude of your location. *Do not skip this step*, the project will not work without customizing the config file.
+2. Do NOT use a virtual environment, because we'll be sudoing
+3. `pip3 install -r requirements.txt`.
+4. Get your OpenWeatherMap api key [here][openweather] (it's free).
+5. Copy `src/config.example.py` to `src/config.py` and edit the file to add your OpenWeatherMap app id, and the latitude and longitude of your location. *Do not skip this step*, the project will not work without customizing the config file.
 
+If using Pillow gives this error: "libopenjp2.so.7: cannot open shared object file: No such file or directory",
+then install it using `sudo apt install libopenjp2-7`.
 
 #### Starting the weather display
 
